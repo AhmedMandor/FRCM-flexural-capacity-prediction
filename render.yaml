@@ -5,6 +5,7 @@ services:
     plan: free
     buildCommand: |
       pip install --upgrade pip setuptools wheel
-      pip install --only-binary=:all: -r requirements.txt
+      pip install --only-binary=:all: numpy pandas scikit-learn xgboost joblib streamlit
+      pip install Cython==0.29.36
     startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
     pythonVersion: 3.10.14
