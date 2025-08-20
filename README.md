@@ -1,1 +1,1 @@
-Prediction the flexuralcapacity of FRCM-strengthened members
+Prediction the flexural capacity of FRCM-strengthened members
