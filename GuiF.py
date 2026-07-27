@@ -25,7 +25,7 @@ scaler = joblib.load(SCALER_PATH)
 #st.set_page_config(page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs", layout="wide")
 #st.markdown("<h1 style='font-size: 36px;'>Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs</h1>", unsafe_allow_html=True)
 st.set_page_config(
-    page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs", layout="wide"
+    page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Rectangular Beams and Slabs", layout="wide"
 )
 
 st.markdown("""
@@ -36,7 +36,7 @@ st.markdown("""
         text-align: center;
         margin-bottom: 10px;
     '>
-        Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs
+        Flexural Capacity Prediction for FRCM-Strengthened RC Rectangular Beams and Slabs
     </h1>
 """, unsafe_allow_html=True)
 
@@ -106,8 +106,8 @@ with col2:
     st.markdown("<h3 style='font-size: 30px;'>📋 Input Summary</h3>", unsafe_allow_html=True)
 
     input_dict = {
-        'Parameter': ['b (mm)', 'h (mm)', 'L (mm)', 'fc (MPa)', ' fs (MPa)', 'Ast (mm2)', 'Asc (mm2)', 'Af (mm2)', 'Ef (GPa)'],
-        'Value': [b, h, L, fc, fs, Ast, Asc, Af, Ef]
+        'Parameter': ['b (mm)', 'd (mm)', 'L (mm)', 'fc (MPa)', ' fs (MPa)', 'Ast (mm2)', 'Asc (mm2)', 'Af (mm2)', 'Ef (GPa)'],
+        'Value': [b, d, L, fc, fs, Ast, Asc, Af, Ef]
     }
     summary_df = pd.DataFrame(input_dict)
     #st.subheader("Input Summary")
@@ -140,7 +140,7 @@ with col2:
     <table class="horizontal-table">
     <tr>
         <th>b (mm)</th>
-        <th>h (mm)</th>
+        <th>d (mm)</th>
         <th>L (mm)</th>
         <th>fc (MPa)</th>
         <th>fs (MPa)</th>
@@ -151,7 +151,7 @@ with col2:
     </tr>
     <tr>
         <td>{b}</td>
-        <td>{h}</td>
+        <td>{d}</td>
         <td>{L}</td>
         <td>{fc}</td>
         <td>{fs}</td>
@@ -170,7 +170,7 @@ with col2:
 # ===== Prepare Input for Prediction =====
 input_df = pd.DataFrame({
     'b (mm)': [b],
-    'h (mm)': [h],
+    'h (mm)': [d],
     'L (mm)': [L],
     'fc (MPa)': [fc],
     ' fs (MPa)': [fs],
