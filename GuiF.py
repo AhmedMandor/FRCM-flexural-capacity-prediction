@@ -22,8 +22,8 @@ model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 
 # ===== Page Setup =====
-#st.set_page_config(page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs", layout="wide")
-#st.markdown("<h1 style='font-size: 36px;'>Flexural Capacity Prediction for FRCM-Strengthened RC Beams and Slabs</h1>", unsafe_allow_html=True)
+#st.set_page_config(page_title="Flexural Capacity Prediction for FRCM-Strengthened Rectangular RC Beams and Slabs", layout="wide")
+#st.markdown("<h1 style='font-size: 36px;'>Flexural Capacity Prediction for FRCM-Strengthened Rectangular RC Beams and Slabs</h1>", unsafe_allow_html=True)
 st.set_page_config(
     page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Rectangular Beams and Slabs", layout="wide"
 )
@@ -40,7 +40,7 @@ st.markdown("""
     </h1>
 """, unsafe_allow_html=True)
 
-st.markdown("<p style='font-size: 30px;'>This application predicts the <strong>flexural capacity (M)</strong> of reinforced concrete beams and slabs strengthened with FRCM composites using a trained XGBoost ML model.</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 30px;'>This application predicts the <strong>flexural capacity (M)</strong> of reinforced concrete rectangular beams and slabs strengthened with FRCM composites using a trained XGBoost ML model.</p>", unsafe_allow_html=True)
 
 
 
@@ -56,7 +56,7 @@ with col1:
     b = st.slider("",
                     min_value=120, max_value=1000, value=300, step=10)
 
-    st.markdown("<p style='font-size:28px; font-weight:bold;margin-bottom:0px;'>Member depth (h) [mm]</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:28px; font-weight:bold;margin-bottom:0px;'>Member depth (d) [mm]</p>", unsafe_allow_html=True)
     h = st.slider("",
                     min_value=100, max_value=500, value=500, step=10)
     
@@ -170,7 +170,7 @@ with col2:
 # ===== Prepare Input for Prediction =====
 input_df = pd.DataFrame({
     'b (mm)': [b],
-    'h (mm)': [d],
+    'd (mm)': [d],
     'L (mm)': [L],
     'fc (MPa)': [fc],
     ' fs (MPa)': [fs],
