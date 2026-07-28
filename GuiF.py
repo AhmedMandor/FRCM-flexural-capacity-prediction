@@ -22,10 +22,10 @@ model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 
 # ===== Page Setup =====
-#st.set_page_config(page_title="Flexural Capacity Prediction for FRCM-Strengthened Rectangular RC Beams and Slabs", layout="wide")
-#st.markdown("<h1 style='font-size: 36px;'>Flexural Capacity Prediction for FRCM-Strengthened Rectangular RC Beams and Slabs</h1>", unsafe_allow_html=True)
+#st.set_page_config(page_title="Flexural Capacity Prediction for FRCM-Strengthened Members", layout="wide")
+#st.markdown("<h1 style='font-size: 36px;'>Flexural Capacity Prediction for FRCM-Strengthened Members</h1>", unsafe_allow_html=True)
 st.set_page_config(
-    page_title="Flexural Capacity Prediction for FRCM-Strengthened RC Rectangular Beams and Slabs", layout="wide"
+    page_title="Flexural Capacity Prediction for FRCM-Strengthened Members", layout="wide"
 )
 
 st.markdown("""
