@@ -56,7 +56,7 @@ with col1:
     b = st.slider("",
                     min_value=120, max_value=1000, value=300, step=10)
 
-    st.markdown("<p style='font-size:28px; font-weight:bold;margin-bottom:0px;'>Member depth (d) [mm]</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size:28px; font-weight:bold;margin-bottom:0px;'>Effective depth (d) [mm]</p>", unsafe_allow_html=True)
     d = st.slider("",
                     min_value=90, max_value=500, value=500, step=10)
     
