@@ -36,7 +36,7 @@ st.markdown("""
         text-align: center;
         margin-bottom: 10px;
     '>
-        Flexural Capacity Prediction for FRCM-Strengthened RC Rectangular Beams and Slabs
+        Flexural Capacity Prediction for FRCM-Strengthened Members
     </h1>
 """, unsafe_allow_html=True)
 
